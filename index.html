@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulari de registre</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <h1>Formulari de registre</h1>
+
+        <p class="introduccio">
+            Omple el formulari per registrarte a l'activitat
+        </p>
+
+        <form action="https://m0373ac3.free.nf/processa.php" method="get">
+
+
+            <fieldset>
+                <legend>Dades personals</legend>
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="Nom" required>
+                <label for="cognoms">Cognoms:</label>
+                <input type="text" id="cognoms" name="Cognoms" required>
+                <label for="correu">Correu electrònic:</label>
+                <input type="email" id="correu" name="Correu electrònic" required>
+                <label for="contrasenya">Contrasenya:</label>
+                <input type="password" id="contrasenya" name="Contrasenya" required>
+                <label for="edat">Edat:</label>
+                <input type="number" id="edat" name="Edat" min="14" max="100" value="25" required>
+                <label for="naixement">Data de naixement:</label>
+                <input type="date" id="naixement" name="Data de naixement" required>
+                <label for="telefon">Telèfon:</label>
+                <input type="tel" id="telefon" name="Telèfon" required>
+                <label for="web">Pàgina Web:</label>
+                <input type="url" id="web" name="Pàgina Web" placeholder="https://exemple.com " required>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferències</legend>
+                <label for="colorpreferit">Color preferit:</label>
+                <input type="color" id="colorpreferit" name="Color preferit" value="#0d6efd" required>
+                <label for="program">Quant t'agrada programar?</label>
+                <input type="range" id="program" name="Gust de programació" min="0" max="10" value="5">
+
+                <div class="camp">
+                    <label>Gènere:</label>
+                    <div class="opcions">
+                        <input type="radio" id="home" name="Gènere" value="home">
+                        <label for="home">Home</label>
+
+                        <input type="radio" id="dona" name="Gènere" value="dona">
+                        <label for="dona">Dona</label>
+
+                        <input type="radio" id="altre" name="Gènere" value="altre">
+                        <label for="altre">Altre</label>
+                    </div>
+                </div>
+
+                <div class="camp">
+                    <label>Aficions:</label>
+                    <div class="opcions">
+                        <input type="checkbox" id="programacio" name="Aficions" value="programacio">
+                        <label for="programacio">Programació</label>
+                        <input type="checkbox" id="videojocs" name="Aficions" value="videojocs">
+                        <label for="videojocs">Videojocs</label>
+                        <input type="checkbox" id="esport" name="Aficions" value="esport">
+                        <label for="esport">Esport</label>
+                        <input type="checkbox" id="musica" name="Aficions" value="musica">
+                        <label for="musica">Música</label>
+                    </div>
+                    hla e
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Localització</legend>
+                <select>
+                    <option value="Espanya">Espanya</option>
+                    <option value="França">França</option>
+                    <option value="Itàlia">Itàlia</option>
+                    <option value="Portugal"></option>
+                </select>
+            </fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Netejar">
+        </form>
+
+    </main>
+</body>
+
+</html>
