@@ -37,6 +37,10 @@
                 <input type="tel" id="telefon" name="Telèfon" required>
                 <label for="web">Pàgina Web:</label>
                 <input type="url" id="web" name="Pàgina Web" placeholder="https://exemple.com " required>
+                <label for="temps">Hora actual:</label>
+                <input type="time" id="temps" name="hora actual">
+                <label type="Mes">Mes de naixement:</label>
+                <input type="month" id="mes" name="mes de naixement">
 
             </fieldset>
 
@@ -50,14 +54,17 @@
                 <div class="camp">
                     <label>Gènere:</label>
                     <div class="opcions">
-                        <input type="radio" id="home" name="Gènere" value="home">
+                        <input type="radio" id="home" name="Gènere" value="home" required>
                         <label for="home">Home</label>
 
-                        <input type="radio" id="dona" name="Gènere" value="dona">
+                        <input type="radio" id="dona" name="Gènere" value="dona" required>
                         <label for="dona">Dona</label>
 
-                        <input type="radio" id="altre" name="Gènere" value="altre">
+                        <input type="radio" id="altre" name="Gènere" value="altre" required>
                         <label for="altre">Altre</label>
+
+                        <input type="radio" id="nobinari" name="No Binari">
+                        <label for="nobinari">No Binari</label>
                     </div>
                 </div>
 
@@ -72,19 +79,54 @@
                         <label for="esport">Esport</label>
                         <input type="checkbox" id="musica" name="Aficions" value="musica">
                         <label for="musica">Música</label>
+                        <input type="checkbox" id="pintura" name="Aficions">
+                        <label for="pintura">Pintura</label>
                     </div>
-                    hla e
                 </div>
             </fieldset>
 
             <fieldset>
                 <legend>Localització</legend>
-                <select>
+                <label for="pais">País:</label>
+                <select id="pais" name="País" required>
                     <option value="Espanya">Espanya</option>
                     <option value="França">França</option>
                     <option value="Itàlia">Itàlia</option>
-                    <option value="Portugal"></option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Alemanya">Alemanya</option>
+                    <option value="Regne Unit">Regne Unit</option>
+                    <option value="Estats Units">Estats Units</option>
                 </select>
+
+
+                <label for="municipi">Municipi:</label>
+                <input type="text" id="municipi" name="Municipi" list="municipis">
+                <datalist id="municipis">
+                    <option>Barcelona</option>
+                    <option>Girona</option>
+                    <option>Lleida</optsion>
+                    <option>Tarragona</option>
+                    <option>Badalona</option>
+                    <option>Sabadell</option>
+                    <option>Terrassa</option>
+                    <option>Mataró</option>
+                    <option>Sant Cugat del Vallès</option>
+                    <option>Pineda de Mar</option>
+                </datalist>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informació addicional</legend>
+
+                <label for="comentaris">Comentaris:</label>
+                <textarea type="text" id="comentaris" name="comentaris" placeholder="Escriu aquí el teu comentari"></textarea>
+
+                <label for="fitxer">Fitxer:</label>
+                <input type="file" id="fitxe" name="fitxer">
+
+                <label for="condicions">Accepto les condicions de la inscripció.</label>
+                <input type="checkbox" id="condicions" name="condicions" required>
+
             </fieldset>
             <input type="submit" value="Enviar">
             <input type="reset" value="Netejar">
